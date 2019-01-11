@@ -1,0 +1,352 @@
+/*!
+ * Bootstrap v4.2.1 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+/* Custom Styles */
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+}
+
+// Colors
+$blue: #26a1e0;
+$dark-blue: #192a3b;
+
+// Common
+a {
+    @include transition(all .3s ease-out);
+}
+
+#home {
+    overflow-x: hidden;
+}
+
+// Menu
+#menu {
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+    border: 0;
+
+    a {
+        color: #333;
+    }
+
+    @media screen and (max-width: 767px) {
+        .navbar-nav {
+            li {
+                text-align: center;
+            }
+        }
+    }
+
+
+
+    .navbar-nav>li>a {
+
+        &:hover,
+        &:focus {
+            background-color: $blue;
+            color: #fff;
+        }
+    }
+}
+
+// Slider
+.flexslider {
+    border: 0;
+    margin: 0;
+
+    .flex-control-nav {
+        bottom: 50px;
+
+        @media screen and (max-width: 550px) {
+            display: none;
+        }
+
+        li {
+            a {
+                background-color: #fff;
+
+                &.flex-active {
+                    background: #555;
+                }
+            }
+        }
+    }
+
+    .slides {
+        img {
+            max-height: 600px;
+            width: 100%;
+        }
+    }
+}
+
+// Newsletter
+#newsletter {
+    background-color: #eaeaea;
+    padding: 20px 0;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
+
+    h3 {
+        margin: 9px 0 0;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+// About
+#about {
+    @include clearfix;
+
+    .about-image,
+    .about-content {
+        width: 50%;
+        min-height: 400px;
+    }
+
+    .about-image {
+        background: url(../images/about-image.jpg) no-repeat;
+        background-size: cover;
+        float: left;
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    .about-content {
+        padding: 60px 90px;
+        float: right;
+
+        @media screen and (max-width: 1000px) {
+            float: none;
+            width: 100%;
+            min-height: auto;
+            padding: 40px;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+    }
+
+}
+
+
+.separator {
+    width: 70px;
+    height: 2px;
+    background: $blue;
+    margin-bottom: 20px;
+}
+
+
+// Features
+#features {
+    .icon-boxes {
+        .icon-box {
+            text-align: center;
+        }
+
+        i {
+            color: $blue;
+            font-size: 50px;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        p {
+            padding: 0 20px;
+        }
+    }
+}
+
+// Blog
+#blog {
+    margin-top: 50px;
+
+    .blog-post {
+        margin-bottom: 50px;
+        h3 {
+            text-transform: uppercase;
+            font-size: 18px;
+            color: #333;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #787878;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.single {
+    padding-bottom: 50px;
+}
+
+.page {
+
+}
+
+// Map
+#map {
+    margin-top: 80px;
+    max-width: 1920px;
+    height: 300px;
+}
+
+// Contact 
+#contact {
+    padding-bottom: 40px;
+    form {
+        width: 100%;
+    }
+}
+
+// Footer
+#footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    .footer-widgets {
+        h4 {
+            font-weight: bold;
+        }
+    }
+
+    .footer-icons {
+        margin-top: 100px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+
+            li {
+                display: inline-block;
+
+                a {
+                    color: #787878;
+                    font-size: 24px;
+                    border: 1px solid #c6c6c6;
+                    display: block;
+                    width: 36px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+
+    .footer-copyrights {
+        margin-top: 20px;
+    }
+}
+
+// Others
+.btn  {
+    border-radius: 0;
+}
+.btn-blue {
+    background-color: #26a1e0;
+    border: 0;
+}
+section {
+    header {
+        text-align: center;
+        max-width: 750px;
+        margin: 80px auto 100px;
+
+        h1,
+        h2,
+        h3 {
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .separator {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+
+}
+
+// Dark content
+.content-dark {
+    background-color: $dark-blue;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    label {
+        color: #fff;
+    }
+}
